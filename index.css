@@ -1,0 +1,46 @@
+body {
+  background-color: black !important;
+  font-family: "ubuntu", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-shadow-green {
+  text-shadow: 2px 2px 4px #008000;
+}
+
+.main-image {
+  box-shadow: -1px -1px 42px rgba(1, 238, 5, 0.5);
+}
+
+.icon:hover {
+  box-shadow: -1px -1px 20px rgba(1, 238, 5, 0.5);
+}
+
+#cursor {
+  display: inline-block !important;
+  width: 8px !important;
+  background-color: black !important;
+  margin-left: 5px !important;
+  animation: blink 0.8s infinite !important;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.navbar-heading {
+  font-size: 32px !important;
+}
+
+.nav-buttons:hover {
+  color: #008000 !important;
+  text-shadow: 2px 2px 4px #008000;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-heading {
+    font-size: 25px !important;
+  }
+}
