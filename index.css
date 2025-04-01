@@ -6,6 +6,23 @@ body {
   font-style: normal;
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f3d21; /* Dark green background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #198754; /* Bootstrap success green */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #198754; /* Slightly darker green on hover */
+}
+
 .text-shadow-green {
   text-shadow: 2px 2px 4px #198754;
 }
