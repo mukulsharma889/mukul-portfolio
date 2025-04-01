@@ -7,15 +7,15 @@ body {
 }
 
 .text-shadow-green {
-  text-shadow: 2px 2px 4px #008000;
+  text-shadow: 2px 2px 4px #198754;
 }
 
 .main-image {
-  box-shadow: -1px -1px 42px rgba(1, 238, 5, 0.5);
+  box-shadow: -1px -1px 42px #198754;
 }
 
 .icon:hover {
-  box-shadow: -1px -1px 20px rgba(1, 238, 5, 0.5);
+  box-shadow: -1px -1px 20px #198754;
 }
 
 #cursor {
@@ -35,12 +35,141 @@ body {
 }
 
 .nav-buttons:hover {
-  color: #008000 !important;
-  text-shadow: 2px 2px 4px #008000;
+  color: #198754 !important;
+  text-shadow: 2px 2px 4px #198754;
 }
 
 @media only screen and (max-width: 600px) {
   .navbar-heading {
     font-size: 25px !important;
+  }
+}
+
+.download-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  /* padding: 10px 20px !important; */
+  /* background-color: #007bff !important; */
+  color: white !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+  border-radius: 5px !important;
+  text-decoration: none !important;
+  transition: background 0.3s !important;
+  position: relative !important;
+}
+
+/* .download-btn:hover {
+  background-color: #0056b3 !important;
+} */
+
+/* Icon Styling (Initially Hidden) */
+.download-btn .icon {
+  margin-left: 10px !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s !important;
+}
+
+/* Show Icon on Hover */
+.download-btn:hover .icon {
+  opacity: 1 !important;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  height: 365px;
+}
+
+/* Vertical Line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background: #198754;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline-box {
+  position: relative;
+  background: #198754;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 10px #198754;
+  width: 45%;
+  margin-bottom: 40px;
+  color: #d4edda;
+  position: relative;
+  opacity: 1;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.left {
+  left: 0;
+  text-align: right;
+}
+
+.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Dot Indicator */
+/* .timeline-box::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  background: #28a745;
+  border-radius: 50%;
+  left: 100%;
+  transform: translateX(-50%);
+} */
+
+.right::before {
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.timeline-box h3 {
+  margin: 5px 0;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.timeline-box p {
+  font-size: 14px;
+}
+
+/* 🌟 Fully Responsive Fix */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+      left: 20px;
+  }
+
+  .timeline-box {
+      width: 90%;
+      left: 0;
+      text-align: left;
+      padding: 20px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .timeline-box::before {
+      left: 10px;
+      transform: translateX(0);
+  }
+
+  .left, .right {
+      left: 0;
+      text-align: left;
   }
 }
