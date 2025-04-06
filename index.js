@@ -31,3 +31,13 @@ function eraseText() {
 
 
 typeWriter();
+
+const popup = document.getElementById("popupForm");
+
+  document.querySelector(".contact-text button").addEventListener("click", () => {
+    popup.style.display = "flex";
+  });
+
+  function closeForm() {
+    popup.style.display = "none";
+  }
