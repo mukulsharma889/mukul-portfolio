@@ -170,11 +170,22 @@ body {
 /* 🌟 Fully Responsive Fix */
 @media screen and (max-width: 768px) {
   .timeline::after {
-    left: 20px;
+    /* left: 20px; */
   }
 
   .name-text {
-    font-size: 30px !important;
+    font-size: 23px !important;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background: #28a745;
+  top: 14px !important;
+  bottom: -34px !important;
+  left: 11px !important;
+  margin-left: -3px;
 }
 
   .timeline-box {
@@ -196,6 +207,11 @@ body {
     left: 0;
     text-align: left;
   }
+
+  .left, .right {
+    left: -11px !important;
+    text-align: right;
+}
 }
 
 /* Overlay background */
