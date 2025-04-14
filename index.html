@@ -28,7 +28,7 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
         <div class="container-fluid">
           <a class="navbar-brand text-light fw-bold navbar-heading" href="#home"
-            >Mukul <span class="text-success text-shadow-green">Sharma</span></a
+            >Mukul <span style="color: #28a745 !important;" class=" text-shadow-green">Sharma</span></a
           >
           <button
             class="navbar-toggler"
@@ -64,7 +64,7 @@
                 <a
                   class="nav-link text-light nav-buttons"
                   aria-current="page"
-                  href="#"
+                  href="#home"
                   >Home</a
                 >
               </li>
@@ -72,12 +72,12 @@
                 <a class="nav-link text-light nav-buttons" href="#">About</a>
               </li> -->
               <li class="nav-item px-md-4">
-                <a class="nav-link text-light nav-buttons" href="#"
+                <a class="nav-link text-light nav-buttons" href="#experience"
                   >Experience</a
                 >
               </li>
               <li class="nav-item px-md-4">
-                <a class="nav-link text-light nav-buttons" href="#">Contact</a>
+                <a class="nav-link text-light nav-buttons" href="#contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -95,13 +95,13 @@
             width="500"
           />
         </div>
-        <div class="col-md-6">
-          <p class="display-6 fw-bold">
-            Hey! I'm <span class="text-success text-shadow-green">Mukul</span>
+        <div class="col-md-6 mt-5 mt-md-0">
+          <p class="display-6 fw-bold name-text">
+            Hey! I'm <span class="text-shadow-green" style="color: #28a745 !important">Mukul</span>
           </p>
-          <p class="display-6 fw-bold">
+          <p class="display-6 fw-bold name-text">
             I'm a
-            <span class="text-success text-shadow-green" id="typewriter"></span
+            <span class="text-shadow-green" id="typewriter" style="color: #28a745 !important"></span
             ><span id="cursor">|</span>
           </p>
           <p>
@@ -117,34 +117,37 @@
               target="_blank"
               title="GitHub"
               ><i
-                class="bi bi-github text-success border border-success p-2 rounded-circle border-3 icon"
-              ></i
+                class="bi bi-github border border-success p-2 rounded-circle border-3 icon"
+                style="color: #28a745 !important"></i
             ></a>
             <a
               href="https://www.linkedin.com/in/mukul-sharma-51440b210/"
               target="_blank"
               title="LinkedIn"
               ><i
-                class="bi bi-linkedin text-success border border-success p-2 rounded-circle border-3 icon"
-              ></i
+                class="bi bi-linkedin border border-success p-2 rounded-circle border-3 icon"
+                style="color: #28a745 !important"
+                ></i
             ></a>
             <a
               href="https://www.instagram.com/mukulsharma._/#"
               target="_blank"
               title="Instagram"
               ><i
-                class="bi bi-instagram text-success border border-success p-2 rounded-circle border-3 icon"
-              ></i
+                class="bi bi-instagram border border-success p-2 rounded-circle border-3 icon"
+                style="color: #28a745 !important"
+                ></i
             ></a>
             <a href="mailto:smukul7465@gmail.com" target="_blank" title="Mail"
               ><i
-                class="bi bi-envelope-at text-success border border-success p-2 rounded-circle border-3 icon"
-              ></i
+                class="bi bi-envelope-at border border-success p-2 rounded-circle border-3 icon"
+                style="color: #28a745 !important"
+                ></i
             ></a>
           </div>
           <a
             href="files/Mukul_Sharma_updated.pdf"
-            style="background-color: #198754 !important"
+            style="background-color: #28a745 !important"
             title="Mukul's CV"
             class="btn btn-success px-md-5 download-btn"
             download="Mukul Sharma CV"
@@ -154,7 +157,7 @@
       </div>
       <!-- Hero -->
       <div class="my-5" id="experience">
-        <h1 style="text-align: center" class="my-5 text-success">
+        <h1 style="text-align: center; color: #28a745 !important;" class="my-5">
           <b>My Experience</b>
         </h1>
 
@@ -172,29 +175,31 @@
           </div>
         </div>
       </div>
-
-      
     </div>
-    <section class="contact-modern mb-3" id="contact">
-      <div class="contact-modern-content row gap-4 justify-content-center align-items-center mx-0">
-    
-        <!-- Left Text -->
-        <div class="contact-text col-md-5">
-          <h2>Get In Touch</h2>
-          <p>Have a project you'd like to discuss? Just leave me a message and I’ll get back to you within 24 hours.</p>
-          <button>
-            SEND DETAILS <i class="fas fa-paper-plane"></i>
-          </button>
+    <section class="row m-0 p-0" id="contact">
+      <div class="bg-light col-12 col-md-6 text-center py-5">
+        <h2>Let's Get In Touch</h2>
+        <p>
+          If you have any questions or just want to connect, feel free to reach
+          out. I'm always open to discuss.
+        </p>
+        <button
+          class="contact-btn"
+          onclick="document.getElementById('popupForm').style.display='flex'"
+        >
+          Send Details <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+
+      <div
+        class="bg-light col-md-6 col-12 text-center d-flex align-items-center justify-content-center flex-column py-md-5 pt-0 border-0 social-links"
+      >
+        <h4>Connect with me</h4>
+        <div class="d-flex gap-3 social-icons">
+          <a href="https://www.linkedin.com/in/mukul-sharma-51440b210/" target="_blank" class="social-links"><i class="bi bi-linkedin fs-4"></i></a>
+          <a href="https://github.com/mukulsharma889/" target="_blank" class="social-links"><i class="bi bi-github fs-4"></i></a>
+          <a href="mailto:smukul7465@gmail.com" class="social-links"><i class="bi bi-envelope fs-4"></i></a>
         </div>
-    
-        <!-- Social Links -->
-        <div class="social-links col-md-5 justify-content-center align-items-center">
-          <h4>Social Links</h4>
-          <a href="mailto:smukul7465@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-          <a target="_blank" href="https://www.linkedin.com/in/mukul-sharma-51440b210/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a target="_blank" href="https://github.com/mukulsharma889" title="GitHub"><i class="fab fa-github"></i></a>
-        </div>
-    
       </div>
     </section>
 
@@ -206,7 +211,7 @@
           <input type="text" placeholder="Your Name" required />
           <input type="email" placeholder="Your Email" required />
           <textarea placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit">Send</button>
+          <button type="submit" class="popup-submit-btn">Send</button>
         </form>
       </div>
     </div>
