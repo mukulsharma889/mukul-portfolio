@@ -169,24 +169,20 @@ body {
 
 /* 🌟 Fully Responsive Fix */
 @media screen and (max-width: 768px) {
-  .timeline::after {
-    /* left: 20px; */
-  }
-
   .name-text {
     font-size: 23px !important;
-}
+  }
 
-.timeline::after {
-  content: "";
-  position: absolute;
-  width: 6px;
-  background: #28a745;
-  top: 14px !important;
-  bottom: -34px !important;
-  left: 11px !important;
-  margin-left: -3px;
-}
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background: #28a745;
+    top: 14px !important;
+    bottom: -34px !important;
+    left: 11px !important;
+    margin-left: -3px;
+  }
 
   .timeline-box {
     width: 85%;
@@ -208,10 +204,11 @@ body {
     text-align: left;
   }
 
-  .left, .right {
+  .left,
+  .right {
     left: -11px !important;
     text-align: right;
-}
+  }
 }
 
 /* Overlay background */
