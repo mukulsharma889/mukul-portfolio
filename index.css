@@ -155,10 +155,10 @@ p {
   color: var(--accent-soft) !important;
 }
 
-.nav-buttons:hover::after,
+/* .nav-buttons:hover::after,
 .nav-link.active::after {
-  width: calc(100% - 1rem);
-}
+   width: calc(100% - 1rem);
+} */
 
 .navbar-toggler {
   border: 1px solid var(--outline) !important;
@@ -877,7 +877,7 @@ p {
     border: 1px solid var(--outline);
     border-radius: 14px;
     margin-top: 0.6rem;
-    padding: 0.6rem 0;
+    padding: 0.6rem;
   }
 
   .main-image {
@@ -1040,7 +1040,7 @@ p {
   }
 
   .skills-grid {
-    padding: 0 3rem 0 3rem;
+    padding: 0 10px 0 10px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
