@@ -1,10 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mukul's Portfolio</title>
-    <link rel="stylesheet" href="index.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,8 +20,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <div id="scrollProgress" aria-hidden="true"></div>
+
     <div class="container">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
@@ -96,43 +98,65 @@
       <!-- Navbar -->
 
       <!-- Hero -->
-      <div class="row text-light align-items-center my-md-5 my-4" id="home">
+      <div class="row text-light align-items-center" id="home">
         <div class="col-md-6">
           <img
             src="files/IMG_7756c.jpg"
-            alt="Panda Image"
+            alt="Portrait of Mukul Sharma"
             class="img-fluid rounded-circle main-image"
             width="450"
+            loading="lazy"
           />
         </div>
         <div class="col-md-6 mt-5 mt-md-0">
-          <p class="display-6 fw-bold name-text mb-2">
-            Hey! I'm
-            <span class="text-shadow-green" style="color: #28a745 !important"
-              >Mukul</span
+          <div class="hero-title-group">
+            <p class="display-6 fw-bold name-text hero-title">
+              Hey! I'm
+              <span class="text-shadow-green" style="color: #28a745 !important"
+                >Mukul</span
+              >
+            </p>
+            <p class="display-6 fw-bold name-text hero-role">
+              I'm a
+              <span
+                class="text-shadow-green"
+                id="typewriter"
+                style="color: #28a745 !important"
+              ></span
+              ><span id="cursor">|</span>
+            </p>
+          </div>
+          <p class="hero-summary">
+            .NET Software Engineer with hands-on experience delivering scalable,
+            clean-architecture web applications. I specialize in .NET, Angular,
+            and SQL Server, with practical expertise in CQRS, JavaScript, HTML,
+            CSS, and Bootstrap. I focus on writing maintainable,
+            high-performance code and turning complex business requirements into
+            reliable solutions.
+          </p>
+          <div class="trust-strip" aria-label="Quick professional details">
+            <span class="trust-pill"
+              ><i class="bi bi-briefcase-fill" aria-hidden="true"></i> Full-time
+              at Step2gen</span
             >
-          </p>
-          <p class="display-6 fw-bold name-text">
-            I'm a
-            <span
-              class="text-shadow-green"
-              id="typewriter"
-              style="color: #28a745 !important"
-            ></span
-            ><span id="cursor">|</span>
-          </p>
-          <p>
-            .NET Software Engineer with 1+ years of experience in .NET, Angular,
-            SQL Server, and Clean Architecture. Skilled in building scalable web
-            applications using CQRS, JavaScript, HTML, CSS, and Bootstrap.
-            Passionate about writing clean, efficient code and solving complex
-            problems.
-          </p>
-          <div class="icons d-flex gap-4 my-5">
+            <span class="trust-pill"
+              ><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Based in
+              India</span
+            >
+            <!-- <span class="trust-pill"
+              ><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
+              Open to freelance</span
+            > -->
+          </div>
+          <div class="icons d-flex gap-4">
             <a
               href="https://github.com/mukulsharma889"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Mukul Sharma GitHub profile"
               title="GitHub"
+              data-track-action="social_click"
+              data-track-label="github_hero"
               ><i
                 class="bi bi-github border border-success p-2 rounded-circle border-3 icon"
                 style="color: #28a745 !important"
@@ -141,7 +165,11 @@
             <a
               href="https://www.linkedin.com/in/mukul-sharma-51440b210/"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Mukul Sharma LinkedIn profile"
               title="LinkedIn"
+              data-track-action="social_click"
+              data-track-label="linkedin_hero"
               ><i
                 class="bi bi-linkedin border border-success p-2 rounded-circle border-3 icon"
                 style="color: #28a745 !important"
@@ -150,13 +178,24 @@
             <a
               href="https://www.instagram.com/mukulsharma._/#"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Mukul Sharma Instagram profile"
               title="Instagram"
+              data-track-action="social_click"
+              data-track-label="instagram_hero"
               ><i
                 class="bi bi-instagram border border-success p-2 rounded-circle border-3 icon"
                 style="color: #28a745 !important"
               ></i
             ></a>
-            <a href="mailto:smukul7465@gmail.com" target="_blank" title="Mail"
+            <a
+              href="mailto:smukul7465@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Send email to Mukul Sharma"
+              title="Mail"
+              data-track-action="social_click"
+              data-track-label="email_hero"
               ><i
                 class="bi bi-envelope-at border border-success p-2 rounded-circle border-3 icon"
                 style="color: #28a745 !important"
@@ -168,16 +207,19 @@
             style="background-color: #28a745 !important"
             title="Mukul's CV"
             class="btn btn-success px-md-5 download-btn"
+            id="downloadCvBtn"
+            data-track-action="cta_click"
+            data-track-label="download_cv"
             download="Mukul Sharma CV"
             >Download CV <i class="fas fa-download icon"></i
           ></a>
         </div>
       </div>
       <!-- Hero -->
-      <div class="my-5" id="experience">
-        <h1 style="text-align: center; color: #28a745 !important" class="my-5">
-          <b>My Experience</b>
-        </h1>
+      <div class="section-divider" aria-hidden="true"></div>
+
+      <div id="experience">
+        <h1 class="section-title">My Experience</h1>
 
         <div class="timeline">
           <div class="timeline-box left mx-5 mx-sm-0">
@@ -197,6 +239,8 @@
           </div>
         </div>
       </div>
+
+      <div class="section-divider" aria-hidden="true"></div>
     </div>
 
     <div id="expertise" class="expertise-container p-md-5">
@@ -207,48 +251,48 @@
 
       <div class="skills-grid">
         <div class="skill-card">
-          <div class="skill-icon">🌐</div>
+          <div class="skill-header">
+            <div class="skill-icon">🌐</div>
+            <span class="skill-tag">Core Skill</span>
+          </div>
           <div class="skill-name">HTML</div>
-          <div class="skill-level">Expert</div>
-          <div class="skill-bar">
-            <div class="skill-progress" style="--progress: 95%"></div>
-          </div>
+          <div class="skill-level">Production-ready</div>
         </div>
 
         <div class="skill-card">
-          <div class="skill-icon">🎨</div>
+          <div class="skill-header">
+            <div class="skill-icon">🎨</div>
+            <span class="skill-tag">Core Skill</span>
+          </div>
           <div class="skill-name">CSS</div>
-          <div class="skill-level">Expert</div>
-          <div class="skill-bar">
-            <div class="skill-progress" style="--progress: 90%"></div>
-          </div>
+          <div class="skill-level">Production-ready</div>
         </div>
 
         <div class="skill-card">
-          <div class="skill-icon">🅰️</div>
+          <div class="skill-header">
+            <div class="skill-icon">🅰️</div>
+            <span class="skill-tag">Core Skill</span>
+          </div>
           <div class="skill-name">Angular</div>
-          <div class="skill-level">Expert</div>
-          <div class="skill-bar">
-            <div class="skill-progress" style="--progress: 95%"></div>
-          </div>
+          <div class="skill-level">Production-ready</div>
         </div>
 
         <div class="skill-card">
-          <div class="skill-icon">🔷</div>
+          <div class="skill-header">
+            <div class="skill-icon">🔷</div>
+            <span class="skill-tag">Core Skill</span>
+          </div>
           <div class="skill-name">ASP.NET</div>
-          <div class="skill-level">Expert</div>
-          <div class="skill-bar">
-            <div class="skill-progress" style="--progress: 95%"></div>
-          </div>
+          <div class="skill-level">Production-ready</div>
         </div>
 
         <div class="skill-card">
-          <div class="skill-icon">🗄️</div>
-          <div class="skill-name">SQL</div>
-          <div class="skill-level">Expert</div>
-          <div class="skill-bar">
-            <div class="skill-progress" style="--progress: 95%"></div>
+          <div class="skill-header">
+            <div class="skill-icon">🗄️</div>
+            <span class="skill-tag">Core Skill</span>
           </div>
+          <div class="skill-name">SQL</div>
+          <div class="skill-level">Production-ready</div>
         </div>
       </div>
     </div>
@@ -261,7 +305,10 @@
         </p>
         <button
           class="contact-btn"
-          onclick="document.getElementById('popupForm').style.display='flex'"
+          id="primaryContactBtn"
+          data-track-action="cta_click"
+          data-track-label="contact_primary"
+          onclick="document.getElementById('popupForm').style.display = 'flex'"
         >
           Send Details <i class="fas fa-paper-plane"></i>
         </button>
@@ -275,16 +322,29 @@
           <a
             href="https://www.linkedin.com/in/mukul-sharma-51440b210/"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Mukul Sharma LinkedIn profile"
             class="social-links"
+            data-track-action="social_click"
+            data-track-label="linkedin_contact"
             ><i class="bi bi-linkedin fs-4"></i
           ></a>
           <a
             href="https://github.com/mukulsharma889/"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Mukul Sharma GitHub profile"
             class="social-links"
+            data-track-action="social_click"
+            data-track-label="github_contact"
             ><i class="bi bi-github fs-4"></i
           ></a>
-          <a href="mailto:smukul7465@gmail.com" class="social-links"
+          <a
+            href="mailto:smukul7465@gmail.com"
+            aria-label="Send email to Mukul Sharma"
+            class="social-links"
+            data-track-action="social_click"
+            data-track-label="email_contact"
             ><i class="bi bi-envelope fs-4"></i
           ></a>
         </div>
@@ -295,14 +355,75 @@
       <div class="popup-form-container">
         <button class="close-btn" onclick="closeForm()">&times;</button>
         <h3>Contact Me</h3>
-        <form>
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" rows="5" required></textarea>
+        <!--
+          To enable email sending you'll need an EmailJS account (https://www.emailjs.com/)
+          1. Create a service (e.g. gmail, outlook) and note the service ID.
+          2. Create a template and note the template ID. Use variable names:
+             user_name, user_email, message
+          3. Copy your user ID from the EmailJS dashboard and replace the placeholder
+             below in the initialization script.
+          4. Replace SERVICE_ID and TEMPLATE_ID in the JS below with your actual values.
+        -->
+        <form id="contactForm" novalidate>
+          <p id="formStatus" class="form-status" aria-live="polite"></p>
+          <div class="form-field">
+            <input
+              name="user_name"
+              type="text"
+              placeholder="Your Name"
+              autocomplete="name"
+              required
+            />
+            <small class="field-hint"
+              >Use your real name for a faster response.</small
+            >
+            <small class="field-error" id="error-user_name"></small>
+          </div>
+          <div class="form-field">
+            <input
+              name="user_email"
+              type="email"
+              placeholder="Your Email"
+              autocomplete="email"
+              required
+            />
+            <small class="field-hint"
+              >I usually reply within 24-48 hours.</small
+            >
+            <small class="field-error" id="error-user_email"></small>
+          </div>
+          <div class="form-field">
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea>
+            <small class="field-hint"
+              >Brief project scope, timeline, and budget helps.</small
+            >
+            <small class="field-error" id="error-message"></small>
+          </div>
           <button type="submit" class="popup-submit-btn">Send</button>
         </form>
       </div>
     </div>
+
+    <!-- back-to-top floating button -->
+    <button id="backToTop" title="Back to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- sticky mobile conversion cta -->
+    <button
+      id="mobileHireMe"
+      class="mobile-hire-btn"
+      title="Open contact form"
+      data-track-action="cta_click"
+      data-track-label="mobile_hire_me"
+    >
+      Hire Me
+    </button>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -314,6 +435,20 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+
+    <!-- EmailJS SDK -->
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      window.EMAILJS_CONFIG = window.EMAILJS_CONFIG || {
+        publicKey: "",
+        serviceId: "",
+        templateId: "",
+      };
+    </script>
+
     <script src="index.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
